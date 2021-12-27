@@ -1,37 +1,41 @@
 module.exports = {
-  'env': {
-    'browser': true,
-    'es2021': true
+  env: {
+    es2021: true,
+    browser: true,
+    commonjs: true,
+    node: true,
   },
-  'extends': [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended'
-  ],
-  'parser': '@typescript-eslint/parser',
-  'parserOptions': {
-    'ecmaVersion': 12
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    sourceType: 'module',
+    ecmaVersion: 12,
+    projection: ['./tsconfig.json'],
   },
-  'plugins': [
-    '@typescript-eslint'
-  ],
-  'rules': {
-    'indent': [
-      'error',
-      2
+  extends: ['eslint:recommended', 'alloy', 'alloy/typescript', 'plugin:prettier/recommended'],
+  plugins: ['@typescript-eslint'],
+  rules: {
+    '@typescript-eslint/member-ordering': 'off',
+    '@typescript-eslint/no-dynamic-delete': 'error',
+    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/space-infix-ops': ['error', { int32Hint: false }],
+    '@typescript-eslint/explicit-member-accessibility': 'off',
+    '@typescript-eslint/no-parameter-properties': 'off',
+    curly: 'error',
+    'guard-for-in': 'off',
+    'no-magic-numbers': [
+      'off',
+      {
+        ignore: [1, 0, -1],
+      },
     ],
-    'linebreak-style': [
-      'error',
-      'unix'
-    ],
-    'quotes': [
-      'error',
-      'single'
-    ],
-    'semi': [
-      'error',
-      'always'
-    ],
-    'curly': 'error',
-    'block-spacing': 'error'
-  }
+    camelcase: ['error', { properties: 'never' }],
+    'no-sequences': 'off',
+    'prefer-const': 'error',
+    radix: 'off',
+    'arrow-body-style': ['error', 'as-needed'],
+    'no-useless-return': 'error',
+    'no-implicit-coercion': 'off',
+    'no-throw-literal': 'error',
+    'no-useless-concat': 'off',
+  },
 };
