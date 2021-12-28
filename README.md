@@ -406,10 +406,14 @@
   const foo = 0 ? 'bar' : 'baz';
   // good
   for (; true; ) {
-    if (foo === 0) break;
+    if (foo === 0) {
+      break;
+    }
   }
   while (true) {
-    if (foo === 0) break;
+    if (foo === 0) {
+      break;
+    }
   }
   ```
 
@@ -654,7 +658,18 @@
 
 - **必须**使用 `if (foo === 5)` 而不是 `if (5 === foo)` 。
 
-- 使用驼峰命名法。
+- 变量、类、方法需要使用驼峰命名法，属性除外。
+
+- `if` 、 `for` 、 `while` 等必须使用大括号。
+  
+  ```javascript
+  // bad
+  if (a > 5) console.log(a);
+  // good
+  if (a > 5) {
+    console.log(a);
+  }
+  ```
 
 ## 代码风格
 
@@ -670,11 +685,11 @@
   
   ```typescript
   const a = {
-      a: 1,
+    a: 1,
   }; // allow
   const b = { b: 1 }; // allow
   const a = {
-      a: 1
+    a: 1
   }; // not allowed
   ```
 
@@ -709,7 +724,41 @@
 
 - 括号内首尾**禁止**有空格。
 
+- **禁止**使用单行控制语句。
+  
+  ```typescript
+  // not allowed
+  if (a !== 5) { console.log(a) }
+  // allowed
+  if (a !== 5) {
+    console.log(a);
+  }
+  ```
+
 - `{` **禁止**换行。
+
+- `}` 应与 `else` 保持在同一行， `else if` 不拆行。
+  
+  ```typescript
+  // not allowed
+  if (a > 5) {
+    console.log(a);
+  }
+  else if (a === 5) {
+    console.log(5);
+  }
+  else {
+    console.log('too small');
+  }
+  // allowed
+  if (a > 5) {
+    console.log(a);
+  } else if (a === 5) {
+    console.log(5);
+  } else {
+    console.log('too small');
+  }
+  ```
 
 - 在注释前要有空白。
   
