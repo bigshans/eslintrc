@@ -780,3 +780,14 @@ formater 使用 prettier ，更多请遵循 prettier 默认规则。
 目前的配置使用了 eslint 插件融合了 tslint 、 prettier 配置。除了 tslint 因为已经被废弃，所以全部配置融合到 eslint 中， prettier 使用 `.prettierrc` 配置，其中使用 vscode 时，修改 `.prettierrc` 时需要重启。
 
 本配置基于腾讯 alloy 团队的 eslint 配置，并对部分配置进行了修改。格式化部分，完全禁用了 eslint 的格式化功能，借助 prettier 插件进行校验， prettier 进行格式化。
+
+## 安装
+
+在项目中添加库。
+
+``` shell
+yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-alloy eslint-config-prettier eslint-plugin-prettier prettier typescript
+```
+
+然后将 `.eslintrc.js` 和 `.prettierrc` 复制到项目目录下即可。
+
