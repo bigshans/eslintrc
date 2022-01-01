@@ -11,8 +11,8 @@ module.exports = {
     ecmaVersion: 12,
     projection: ['./tsconfig.json'],
   },
-  extends: ['eslint:recommended', 'alloy', 'alloy/typescript', 'plugin:prettier/recommended'],
-  plugins: ['@typescript-eslint'],
+  extends: ['eslint:recommended', 'alloy', 'alloy/typescript', 'prettier'],
+  plugins: ['@typescript-eslint', 'prettier'],
   rules: {
     '@typescript-eslint/member-ordering': 'off',
     '@typescript-eslint/no-dynamic-delete': 'error',
@@ -20,6 +20,7 @@ module.exports = {
     '@typescript-eslint/space-infix-ops': ['error', { int32Hint: false }],
     '@typescript-eslint/explicit-member-accessibility': 'off',
     '@typescript-eslint/no-parameter-properties': 'off',
+    '@typescript-eslint/no-require-imports': 'off',
     curly: 'error',
     'guard-for-in': 'off',
     'no-magic-numbers': [
