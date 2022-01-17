@@ -791,3 +791,9 @@ yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-co
 
 目前 eslint 最新版本与 typescript-eslint 存在不兼容，建议 downgrade 使用。依赖安装完成后，将 `.eslintrc.js` 和 `.prettierrc` 复制到项目目录下即可。
 
+也可以使用 install.sh 脚本安装。
+
+``` shell
+bash ./install.sh <project-path>
+```
+
