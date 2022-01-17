@@ -32,6 +32,7 @@ module.exports = {
     camelcase: ['error', { properties: 'never' }],
     'no-sequences': 'off',
     'prefer-const': 'error',
+    'max-params': ['warn', 4],
     radix: 'off',
     'arrow-body-style': ['error', 'as-needed'],
     'no-useless-return': 'error',
