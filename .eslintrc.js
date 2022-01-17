@@ -11,12 +11,9 @@ module.exports = {
     ecmaVersion: 12,
     projection: ['./tsconfig.json'],
   },
-  extends: ['eslint:recommended', 'alloy', 'alloy/typescript', 'prettier'],
+  extends: ['eslint:recommended', 'alloy', 'alloy/typescript', 'plugin:prettier/recommended'],
   plugins: ['@typescript-eslint', 'prettier'],
   rules: {
-    'prettier/prettier': 'error',
-    'arrow-body-style': 'off',
-    'prefer-arrow-callback': 'off',
     '@typescript-eslint/member-ordering': 'off',
     '@typescript-eslint/no-dynamic-delete': 'error',
     '@typescript-eslint/no-var-requires': 'off',
