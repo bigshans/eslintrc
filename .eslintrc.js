@@ -14,6 +14,9 @@ module.exports = {
   extends: ['eslint:recommended', 'alloy', 'alloy/typescript', 'prettier'],
   plugins: ['@typescript-eslint', 'prettier'],
   rules: {
+    'prettier/prettier': 'error',
+    'arrow-body-style': 'off',
+    'prefer-arrow-callback': 'off',
     '@typescript-eslint/member-ordering': 'off',
     '@typescript-eslint/no-dynamic-delete': 'error',
     '@typescript-eslint/no-var-requires': 'off',
