@@ -29,7 +29,7 @@ module.exports = {
         ignore: [1, 0, -1],
       },
     ],
-    camelcase: ['error', { properties: 'never' }],
+    camelcase: ['error', { properties: 'never', ignoreImports: true, ignoreDestructuring: true }],
     'no-sequences': 'off',
     'prefer-const': 'error',
     'max-params': ['warn', 4],
