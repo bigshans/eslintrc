@@ -18,7 +18,7 @@ module.exports = {
     '@typescript-eslint/no-dynamic-delete': 'error',
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/space-infix-ops': ['error', { int32Hint: false }],
-    '@typescript-eslint/explicit-member-accessibility': 'error',
+    '@typescript-eslint/explicit-member-accessibility': ['error', { overrides: { constructors: 'no-public' } } ],
     '@typescript-eslint/no-parameter-properties': 'off',
     '@typescript-eslint/no-require-imports': 'off',
     curly: 'error',
